@@ -27,7 +27,7 @@ end
   def doctors #has many docs through appointments
     binding.pry
     appointments.map do |appointment|
-      appointment.patient
+      appointment.doctor
         end
     end
   end
