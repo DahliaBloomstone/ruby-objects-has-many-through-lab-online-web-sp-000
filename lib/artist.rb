@@ -24,7 +24,7 @@ def new_song(name, genre)
 end
 
 def genres
-  songs.map do |song|
+  Song.all.map do |song|
     song.genre
   end
 end
