@@ -1,6 +1,6 @@
 #like the customer method
 class Artist
-  attr_accessor :name
+  attr_accessor :name, :artist, :genre
 @@all = [ ]
 
 def initialize(name)
