@@ -13,8 +13,8 @@ def self.all
   @@all
 end
 
-  def new_appointment(doctor, date)
-    Appointment.new(self, doctor, date)
+  def new_appointment(date, doctor)
+    Appointment.new(date, doctor, self)
   end
 
   def appointments #returns all appointments associated w patient
@@ -23,7 +23,7 @@ end
     end
   end
 
-  def doctors #has many docs through appointments 
+  def doctors #has many docs through appointments
     Appointment.all.select do |appointment|
       appointment.doctor
     end
