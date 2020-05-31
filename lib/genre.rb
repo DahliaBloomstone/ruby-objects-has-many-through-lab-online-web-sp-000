@@ -7,7 +7,7 @@ class Genre
     @name = name
   end
 
-  def genre.all
+  def self.all
     @@all
   end
 
