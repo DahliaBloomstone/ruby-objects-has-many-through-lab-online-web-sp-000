@@ -19,7 +19,7 @@ def new_appointment(patient, date)
 
 def appointments #returns all appointments associated with this doctor
   Appointment.all.select do |appointment|
-  appointment.patient == self
+  appointment.doctor == self
   end
 end
 
