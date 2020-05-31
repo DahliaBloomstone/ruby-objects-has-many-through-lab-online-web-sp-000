@@ -24,6 +24,7 @@ end
   end
 
   def doctors #has many docs through appointments
+    binding.pry
     Appointment.all.select do |appointment|
       appointment.doctor == self
     end
