@@ -24,7 +24,7 @@ end
   end
 
   def doctors
-    Appointment.all.map do |appointment|
+    Appointment.map do |appointment|
       appointment.doctor
     end
   end
