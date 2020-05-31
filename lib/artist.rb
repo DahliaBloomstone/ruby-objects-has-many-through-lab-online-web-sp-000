@@ -1,33 +1,33 @@
-#like the customer method
 class Artist
+
   attr_accessor :name, :artist, :genre
-@@all = [ ]
 
-def initialize(name)
-  @name = name
-  @@all << self
-end
+  ALL=[]
 
-def self.all
-  @@all
-end
-
-def songs
-  Song.all.select do |song|
-    song.artist == self
+  def initialize(name)
+    @name = name
+    ALL << self
   end
-end
 
-def new_song(name, genre)
-  song = Song.new(self, name, genre)
-  self.songs.last
-end
-
-def genres
-  Song.all.map do |song|
-    song.genre
+  def self.all
+    ALL
   end
-end
 
+  def new_song(name, genre)
+    song = Song.new(name, self, genre)
+    self.songs.last
+  end
+
+  def songs
+    Song.all.select do |song|
+      song.artist == self
+    end
+  end
+
+  def genres
+    Song.all.map do |song|
+      song.genre
+    end
+  end
 
 end
