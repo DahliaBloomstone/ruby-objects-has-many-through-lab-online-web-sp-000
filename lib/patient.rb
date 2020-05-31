@@ -4,10 +4,10 @@ attr_reader :name, :appointment, :doctor
 
 @@all = [ ]
 
-def initialize(name)
+def initialize(name, doctor, appointment)
 @name = name
 @appointment = appointment
-@@doctor = doctor 
+@doctor = doctor
 @@all << self
   end
 
