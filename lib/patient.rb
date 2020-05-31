@@ -4,9 +4,9 @@ attr_reader :name, :appointment, :doctor
 
 @@all = [ ]
 
-  def initialize(name)
-    @name = name
-    @@all << self
+def initialize(name)
+@name = name
+@@all << self
   end
 
 def self.all
