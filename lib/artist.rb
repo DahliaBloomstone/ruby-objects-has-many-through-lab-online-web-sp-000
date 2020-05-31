@@ -19,7 +19,8 @@ def songs
 end
 
 def new_song(name, genre)
-  Song.new(self, name, genre)
+  song = Song.new(self, name, genre)
+  self.songs.last
 end
 
 def genres
