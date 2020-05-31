@@ -17,13 +17,13 @@ end
     Appointment.new(self, doctor, date)
   end
 
-  def appointments #returns all appointments associated w patient 
+  def appointments #returns all appointments associated w patient
     Appointment.all.select do |appointment|
       appointment.patient == self
     end
   end
 
-  def doctors
+  def doctors #has many docs through appointments 
     Appointment.all.select do |appointment|
       appointment.doctor
     end
