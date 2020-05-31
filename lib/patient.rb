@@ -4,10 +4,8 @@ attr_reader :name, :appointment, :doctor
 
 @@all = [ ]
 
-def initialize(name, doctor, appointment)
+def initialize(name)
 @name = name
-@appointment = appointment
-@doctor = doctor
 @@all << self
   end
 
@@ -26,7 +24,7 @@ end
   end
 
   def doctors
-    Appointment.map do |appointment|
+    Appointment.all.map do |appointment|
       appointment.doctor
     end
   end
