@@ -23,13 +23,13 @@ def appointments
   end
 end
 
-def doctors
+def self.appointments 
 Appointment.all
 end 
 
-Appointment.map do |appointment|
-  appointment.patient
-    end
-  end
+#Appointment.map do |appointment|
+  #appointment.patient
+    #end
+  #end
 
 end
