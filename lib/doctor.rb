@@ -25,7 +25,7 @@ end
 
 def self.appointments 
 Appointment.all
-end 
+end
 
 #Appointment.map do |appointment|
   #appointment.patient
