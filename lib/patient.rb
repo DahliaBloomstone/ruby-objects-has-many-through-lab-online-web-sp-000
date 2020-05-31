@@ -1,4 +1,4 @@
-require pry
+require "pry"
 class Patient
 
 attr_reader :name, :appointment, :doctor
