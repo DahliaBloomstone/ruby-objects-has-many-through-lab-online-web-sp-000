@@ -1,19 +1,22 @@
-#like the meals method
 class Song
+
   attr_accessor :name, :artist, :genre
 
-  @@all = [ ]
+  ALL = []
 
-def initialize(name, genre, artist)
-  @name = name
-  @genre = genre
-  @artist = artist
-  @@all << self
+  def initialize(name="", artist="", genre="")
+    @name = name
+    @artist = artist
+    @genre = genre
+    ALL << self
+  end
+
+  def self.all
+    ALL
+  end
+
+  def artist
+    @artist
+  end
+
 end
-
-def self.all
-  @@all
-end
-
-
-end 
