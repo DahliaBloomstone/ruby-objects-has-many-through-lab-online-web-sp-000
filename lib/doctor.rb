@@ -23,7 +23,7 @@ def appointments
   end
 end
 
-def doctors
+def patients 
 appointments.map do |appointment|
   appointment.doctor
     end
