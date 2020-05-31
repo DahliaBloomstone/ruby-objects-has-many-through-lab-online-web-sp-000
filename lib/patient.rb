@@ -25,7 +25,7 @@ end
 
   def doctors #has many docs through appointments
     Appointment.all.select do |appointment|
-      appointment.doctor
+      appointment.doctor == self
     end
   end
 end
