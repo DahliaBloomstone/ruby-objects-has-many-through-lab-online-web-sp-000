@@ -20,7 +20,13 @@ end
 
 def new_song(artist, genre)
   Song.new(artist, genre)
-end 
+end
+
+def genres
+  songs.map do |song|
+    song.artist
+  end
+end
 
 
 end
