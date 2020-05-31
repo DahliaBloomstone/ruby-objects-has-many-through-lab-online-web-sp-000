@@ -1,1 +1,13 @@
-#like the customer method 
+#like the customer method
+class Artist
+  attr_accessor :name
+@@all = [ ]
+
+def initialize(name)
+  @name = name
+  @@all << self
+end
+
+def self.all
+  @@all
+end 
