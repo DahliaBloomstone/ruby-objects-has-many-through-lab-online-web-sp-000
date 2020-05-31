@@ -6,6 +6,8 @@ attr_reader :name, :appointment, :doctor
 
 def initialize(name)
 @name = name
+@appointment = appointment
+@@doctor = doctor 
 @@all << self
   end
 
