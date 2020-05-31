@@ -23,12 +23,6 @@ class Doctor
     end
   end
 
-  def songs
-    Song.all.select do |song|
-    song.artist == self
-    end
-  end
-
   def patients
     Appointment.all.map do |appointment|
       appointment.patient
