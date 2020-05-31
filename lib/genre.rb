@@ -1,6 +1,6 @@
 #like the waiter method
 class Genre
-attr_accessor :name
+attr_accessor :name, :song, :artist
 
 @@all = [ ]
 
@@ -20,4 +20,4 @@ def songs
 end
 
 
-end 
+end
