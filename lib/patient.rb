@@ -9,9 +9,9 @@ attr_reader :name, :appointment, :doctor
     @@all << self
   end
 
-  def self.all
-    @@all
-  end 
+def self.all
+  @@all
+  end
 
   def new_appointment(doctor, date)
     Appointment.new(self, doctor, date)
