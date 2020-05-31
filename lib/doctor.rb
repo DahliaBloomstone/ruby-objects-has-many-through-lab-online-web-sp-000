@@ -23,7 +23,7 @@ def appointments #returns all appointments associated with this doctor
   end
 end
 
-def patients
+def patients #has many patients through appointments 
 appointments.map do |appointment|
   appointment.doctor
     end
