@@ -13,7 +13,7 @@ def self.all
   @@all
   end
 
-def new_appointment(patient, date)
+def new_appointment(date, patient)
   Appointment.new(patient, self, date)
   end
 
@@ -23,7 +23,7 @@ def appointments #returns all appointments associated with this doctor
   end
 end
 
-def patients #has many patients through appointments 
+def patients #has many patients through appointments
 appointments.map do |appointment|
   appointment.doctor
     end
