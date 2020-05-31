@@ -23,7 +23,7 @@ def appointments
   end
 end
 
-def self.appointments 
+def doctors 
 Appointment.all
 end
 
