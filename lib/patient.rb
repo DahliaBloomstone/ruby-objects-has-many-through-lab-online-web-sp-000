@@ -18,13 +18,13 @@ end
   end
 
   def appointments
-    Appointment.select do |appointment|
+    Appointment.all.select do |appointment|
       appointment.patient == self
     end
   end
 
   def doctors
-    Appointment.map do |appointment|
+    Appointment.all.map do |appointment|
       appointment.doctor
     end
   end
