@@ -17,7 +17,7 @@ end
     Appointment.new(self, doctor, date)
   end
 
-  def appointments
+  def appointments #returns all appointments associated w patient 
     Appointment.all.select do |appointment|
       appointment.patient == self
     end
