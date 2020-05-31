@@ -25,7 +25,7 @@ end
 
 def patients #has many patients through appointments
 appointments.map do |appointment|
-  appointment.doctor
+  appointment.patient
     end
   end
 
