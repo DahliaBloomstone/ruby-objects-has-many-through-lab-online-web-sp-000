@@ -1,29 +1,21 @@
-#like the waiter method
 class Genre
-attr_accessor :name, :song, :artist
 
-@@all = [ ]
+  attr_reader :name, :genre
+  attr_accessor :song
 
-def initialize(name)
-  @name = name
-  @@all << self
-end
-
-def self.all
-@@all
-end
-
-def songs
-  Song.all.select do |song|
-    song.artist == self
+  def initialize(name)
+    @name = name
   end
-end
 
-def artists
-  songs.collect do |song|
-    song.artist
+  def songs
+    Song.all.select do |song|
+      song.genre == self
+    end
   end
-end
 
-
+  def artists
+    Song.all.map do |song|
+      song.artist
+    end
+  end
 end
