@@ -7,9 +7,9 @@ class Genre
     @name = name
   end
 
-  def self.all
+  def genre.all
     @@all
-  end 
+  end
 
   def songs
     Song.all.select do |song|
